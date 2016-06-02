@@ -16,6 +16,8 @@
 		D99914291CFF506A00768005 /* RssTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99914281CFF506A00768005 /* RssTableViewCell.swift */; };
 		D999142B1CFF968D00768005 /* UIImageView+ImageExtentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D999142A1CFF968D00768005 /* UIImageView+ImageExtentsion.swift */; };
 		D999142D1CFFA94F00768005 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D999142C1CFFA94F00768005 /* WebViewController.swift */; };
+		D9AABFA31D00120B00F4E479 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AABFA21D00120B00F4E479 /* CategoriesModel.swift */; };
+		D9AABFA51D0012EC00F4E479 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AABFA41D0012EC00F4E479 /* CategoriesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		D99914281CFF506A00768005 /* RssTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RssTableViewCell.swift; sourceTree = "<group>"; };
 		D999142A1CFF968D00768005 /* UIImageView+ImageExtentsion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageExtentsion.swift"; sourceTree = "<group>"; };
 		D999142C1CFFA94F00768005 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D9AABFA21D00120B00F4E479 /* CategoriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
+		D9AABFA41D0012EC00F4E479 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +68,11 @@
 			children = (
 				D96AB15E1CFE270100AC561E /* AppDelegate.swift */,
 				D96AB1721CFE27D300AC561E /* RSSTableViewController.swift */,
+				D9AABFA41D0012EC00F4E479 /* CategoriesViewController.swift */,
 				D999142A1CFF968D00768005 /* UIImageView+ImageExtentsion.swift */,
 				D99914281CFF506A00768005 /* RssTableViewCell.swift */,
 				D96AB1741CFE2CD000AC561E /* RssFeed.swift */,
+				D9AABFA21D00120B00F4E479 /* CategoriesModel.swift */,
 				D999142C1CFFA94F00768005 /* WebViewController.swift */,
 				D96AB1621CFE270100AC561E /* Main.storyboard */,
 				D96AB1651CFE270100AC561E /* Assets.xcassets */,
@@ -151,7 +157,9 @@
 				D999142D1CFFA94F00768005 /* WebViewController.swift in Sources */,
 				D99914291CFF506A00768005 /* RssTableViewCell.swift in Sources */,
 				D96AB1731CFE27D300AC561E /* RSSTableViewController.swift in Sources */,
+				D9AABFA31D00120B00F4E479 /* CategoriesModel.swift in Sources */,
 				D96AB15F1CFE270100AC561E /* AppDelegate.swift in Sources */,
+				D9AABFA51D0012EC00F4E479 /* CategoriesViewController.swift in Sources */,
 				D96AB1751CFE2CD000AC561E /* RssFeed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

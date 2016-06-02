@@ -11,8 +11,9 @@ import UIKit
 class RSSTableViewController: UITableViewController {
     
     var dataTask: NSURLSessionDataTask?
-    let RSS_URL = "http://www.aftonbladet.se/rss.xml"
+    var RSS_URL = ""
     var rssFeeds = [RssFeed]()
+    var category : CategoriesModel?
     
     var currentElement = ""
     var rss_title : String = "" {
@@ -62,10 +63,19 @@ class RSSTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        if let category = category {
+            RSS_URL = category.link
+            title = category.name
+            startFetchingRSS()
+        } else {
+            return
+        }
+        
+        
+        
         tableView.estimatedRowHeight = 70
         tableView.rowHeight = UITableViewAutomaticDimension
-        
-        startFetchingRSS()
 
     }
 
@@ -76,6 +86,12 @@ class RSSTableViewController: UITableViewController {
     
     deinit {
         dataTask?.cancel()
+    }
+    
+    
+    @IBAction func dismissButtonTapped(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     // MARK: - Table view data source
