@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		D96AB15F1CFE270100AC561E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96AB15E1CFE270100AC561E /* AppDelegate.swift */; };
-		D96AB1611CFE270100AC561E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96AB1601CFE270100AC561E /* ViewController.swift */; };
 		D96AB1641CFE270100AC561E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D96AB1621CFE270100AC561E /* Main.storyboard */; };
 		D96AB1661CFE270100AC561E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D96AB1651CFE270100AC561E /* Assets.xcassets */; };
 		D96AB1691CFE270100AC561E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D96AB1671CFE270100AC561E /* LaunchScreen.storyboard */; };
+		D96AB1731CFE27D300AC561E /* RSSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96AB1721CFE27D300AC561E /* RSSTableViewController.swift */; };
+		D96AB1751CFE2CD000AC561E /* RssFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96AB1741CFE2CD000AC561E /* RssFeed.swift */; };
+		D99914291CFF506A00768005 /* RssTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99914281CFF506A00768005 /* RssTableViewCell.swift */; };
+		D999142B1CFF968D00768005 /* UIImageView+ImageExtentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D999142A1CFF968D00768005 /* UIImageView+ImageExtentsion.swift */; };
+		D999142D1CFFA94F00768005 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D999142C1CFFA94F00768005 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D96AB15B1CFE270100AC561E /* AftonbladetRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AftonbladetRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96AB15E1CFE270100AC561E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D96AB1601CFE270100AC561E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D96AB1631CFE270100AC561E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D96AB1651CFE270100AC561E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D96AB1681CFE270100AC561E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D96AB16A1CFE270100AC561E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D96AB1721CFE27D300AC561E /* RSSTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSTableViewController.swift; sourceTree = "<group>"; };
+		D96AB1741CFE2CD000AC561E /* RssFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RssFeed.swift; sourceTree = "<group>"; };
+		D99914281CFF506A00768005 /* RssTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RssTableViewCell.swift; sourceTree = "<group>"; };
+		D999142A1CFF968D00768005 /* UIImageView+ImageExtentsion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageExtentsion.swift"; sourceTree = "<group>"; };
+		D999142C1CFFA94F00768005 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				D96AB15E1CFE270100AC561E /* AppDelegate.swift */,
-				D96AB1601CFE270100AC561E /* ViewController.swift */,
+				D96AB1721CFE27D300AC561E /* RSSTableViewController.swift */,
+				D999142A1CFF968D00768005 /* UIImageView+ImageExtentsion.swift */,
+				D99914281CFF506A00768005 /* RssTableViewCell.swift */,
+				D96AB1741CFE2CD000AC561E /* RssFeed.swift */,
+				D999142C1CFFA94F00768005 /* WebViewController.swift */,
 				D96AB1621CFE270100AC561E /* Main.storyboard */,
 				D96AB1651CFE270100AC561E /* Assets.xcassets */,
 				D96AB1671CFE270100AC561E /* LaunchScreen.storyboard */,
@@ -135,8 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D96AB1611CFE270100AC561E /* ViewController.swift in Sources */,
+				D999142B1CFF968D00768005 /* UIImageView+ImageExtentsion.swift in Sources */,
+				D999142D1CFFA94F00768005 /* WebViewController.swift in Sources */,
+				D99914291CFF506A00768005 /* RssTableViewCell.swift in Sources */,
+				D96AB1731CFE27D300AC561E /* RSSTableViewController.swift in Sources */,
 				D96AB15F1CFE270100AC561E /* AppDelegate.swift in Sources */,
+				D96AB1751CFE2CD000AC561E /* RssFeed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +302,7 @@
 				D96AB16F1CFE270100AC561E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

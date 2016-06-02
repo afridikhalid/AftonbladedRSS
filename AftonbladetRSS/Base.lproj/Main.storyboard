@@ -1,25 +1,142 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="V8i-re-N22">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Table View Controller-->
+        <scene sceneID="cJo-GF-9VJ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="V8i-re-N22" customClass="RSSTableViewController" customModule="AftonbladetRSS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" id="bxY-zJ-oDg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rssCellIdentifier" rowHeight="160" id="eZi-L2-KPJ" customClass="RssTableViewCell" customModule="AftonbladetRSS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="160"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eZi-L2-KPJ" id="vrK-mF-ah1">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="159.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="F2Z-o5-59K">
+                                            <rect key="frame" x="8" y="8" width="584" height="144"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="248" image="noimage" translatesAutoresizingMaskIntoConstraints="NO" id="dAp-bn-NwR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="72"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g9V-R2-hDd">
+                                                    <rect key="frame" x="0.0" y="72" width="584" height="72"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" verticalCompressionResistancePriority="250" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="gaO-Aa-ry8">
+                                                            <rect key="frame" x="0.0" y="0.0" width="584" height="60"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dl-hW-rqa">
+                                                            <rect key="frame" x="0.0" y="60" width="584" height="12"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="F2Z-o5-59K" secondAttribute="trailing" constant="8" id="BoK-rb-nbz"/>
+                                        <constraint firstItem="F2Z-o5-59K" firstAttribute="leading" secondItem="vrK-mF-ah1" secondAttribute="leading" constant="8" id="E2p-RI-Q4z"/>
+                                        <constraint firstItem="F2Z-o5-59K" firstAttribute="top" secondItem="vrK-mF-ah1" secondAttribute="top" constant="8" id="IuD-XV-K8U"/>
+                                        <constraint firstAttribute="bottom" secondItem="F2Z-o5-59K" secondAttribute="bottom" constant="8" id="oEc-HK-1f2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="pubDateLabel" destination="1dl-hW-rqa" id="LxF-Of-2VT"/>
+                                    <outlet property="rss_imageView" destination="dAp-bn-NwR" id="XGb-TP-u9D"/>
+                                    <outlet property="titleLabel" destination="gaO-Aa-ry8" id="3ST-sG-DDn"/>
+                                    <segue destination="XM6-n8-y7h" kind="presentation" identifier="webViewIdentifier" id="RRX-ud-tAA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="V8i-re-N22" id="ZSu-hY-Ktc"/>
+                            <outlet property="delegate" destination="V8i-re-N22" id="CmR-3u-5vB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="etQ-4D-N9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="418" y="377"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="BZC-ua-tLG">
+            <objects>
+                <viewController id="XM6-n8-y7h" customClass="WebViewController" customModule="AftonbladetRSS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QpJ-L8-1cQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="0gb-fs-oC5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tdc-hb-8hx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHG-8O-neF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="AftonBladet" id="pGr-8o-ssh">
+                                        <barButtonItem key="leftBarButtonItem" title="X" id="jKA-Md-T5b">
+                                            <connections>
+                                                <action selector="dismissButtonTapped:" destination="XM6-n8-y7h" id="mIF-Rz-yr2"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rso-ha-cUj">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wue-4g-A5o">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="JEX-xM-Qrz">
+                                        <connections>
+                                            <action selector="goBack" destination="Rso-ha-cUj" id="VZ3-X6-YKy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wue-4g-A5o" secondAttribute="trailing" id="4kI-dh-FvU"/>
+                            <constraint firstAttribute="bottom" secondItem="Wue-4g-A5o" secondAttribute="bottom" id="IdA-Gy-Esi"/>
+                            <constraint firstItem="0gb-fs-oC5" firstAttribute="top" secondItem="Rso-ha-cUj" secondAttribute="bottom" id="KAe-DQ-kZF"/>
+                            <constraint firstItem="mHG-8O-neF" firstAttribute="top" secondItem="tdc-hb-8hx" secondAttribute="top" id="Shh-HJ-9Vq"/>
+                            <constraint firstItem="Wue-4g-A5o" firstAttribute="leading" secondItem="tdc-hb-8hx" secondAttribute="leading" id="TJP-Tt-Z3V"/>
+                            <constraint firstAttribute="trailing" secondItem="Rso-ha-cUj" secondAttribute="trailing" id="cgJ-la-iTc"/>
+                            <constraint firstAttribute="trailing" secondItem="mHG-8O-neF" secondAttribute="trailing" id="i2Y-90-UcL"/>
+                            <constraint firstItem="Rso-ha-cUj" firstAttribute="top" secondItem="mHG-8O-neF" secondAttribute="bottom" id="uE5-E4-qV0"/>
+                            <constraint firstItem="mHG-8O-neF" firstAttribute="leading" secondItem="tdc-hb-8hx" secondAttribute="leading" id="uXn-Jj-1BK"/>
+                            <constraint firstItem="Rso-ha-cUj" firstAttribute="leading" secondItem="tdc-hb-8hx" secondAttribute="leading" id="ud2-Wf-Uar"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="Rso-ha-cUj" id="UOb-xQ-Gpi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auX-EY-zXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077" y="364"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="noimage" width="180" height="180"/>
+    </resources>
 </document>
